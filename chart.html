@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title>Giám sát trạm BTS</title>
+
+    <meta name="author" content="themsflat.com">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Boostrap style -->
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css"> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap4-alpha3.min.css">
+
+    <!-- FONTS-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Theme style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+
+    <!-- Favicon -->
+    <link href="images/icon/favicon.png" rel="shortcut icon">
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader">
+    <div class="inner one"></div>
+    <div class="inner two"></div>
+    <div class="inner three"></div>
+</div>
+
+<header id="header" class="header fixed">
+    <div class="navbar-top">
+        <div class="curren-menu info-left">
+            <div class="logo">
+                <a href="index.html" title="">
+                    <img src="images/logo.png" alt="One Admin">
+                </a>
+            </div><!-- /.logo -->
+            <div class="top-button">
+                <span></span>
+            </div><!-- /.top-button -->
+            <div class="box-search">
+                <form action="#" method="get" accept-charset="utf-8">
+                    <button><img src="images/icon/search.png" alt=""></button>
+                    <input type="text" placeholder="Tìm kiếm..." name="Search">
+                </form>
+            </div><!-- /.box-search -->
+        </div><!-- /.curren-menu -->
+        <ul class="info-right" >
+            <li class="notification" title="Cảnh báo">
+                <a href="#" class="waves-effect waves-teal">
+                    7
+                </a>
+            </li><!-- /.notification -->
+            <li class="user">
+                <div class="avatar" title="Người dùng">
+                    <img src="images/avatar/user-48.png" alt="">
+                </div>
+                <div class="info">
+                    <p class="name">Tuan Bui</p>
+                    <p class="address">Ho Chi Minh City</p>
+                </div>
+                <div class="arrow-down">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <i class="fa fa-angle-up" aria-hidden="true"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li>
+                            <div class="avatar">
+                                <img src="images/avatar/user-48.png" alt="">
+                            </div>
+                            <div class="profile">
+                                <a href="#" title="">Hiển thị hồ sơ</a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect" title="">Tài khoản</a>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect" title="">Lịch sử hoạt động</a>
+                        </li>
+                        <li>
+                            <a href="#" class="waves-effect" title="">Đăng xuất</a>
+                        </li>
+                    </ul>
+                </div><!-- /.dropdown-menu -->
+                <div class="clearfix"></div>
+            </li><!-- /.user -->
+            <li class="button-menu-right">
+                <img src="images/icon/menu-right.png" alt="">
+            </li><!-- /.button-menu-right -->
+        </ul><!-- /.info-right -->
+        <div class="clearfix"></div>
+    </div>	<!-- /.navbar-top -->
+</header><!-- /header <-->
+
+<section class="vertical-navigation left">
+    <div class="user-profile">
+        <div class="user-img">
+            <a href="#" title="">
+                <div class="img">
+                    <img src="images/avatar/user-64.png" alt="">
+                </div>
+                <div class="status-color blue heartbit style1"></div>
+            </a>
+        </div>
+        <ul class="user-options">
+            <li class="name"><a href="#" title="">TUAN BUI</a></li>
+            <li class="options">ADMINISTRATOR</li>
+        </ul>
+    </div>
+    <ul class="sidebar-nav">
+        <li class="dashboard waves-effect waves-teal active">
+            <div class="img-nav">
+                <img src="images/icon/monitor.png" alt="">
+            </div>
+            <span>GIÁM SÁT</span>
+        </li>
+        <li class="message waves-effect waves-teal">
+            <div class="img-nav">
+                <img src="images/icon/message.png" alt="">
+                <span>14</span>
+            </div>
+            <span>CẢNH BÁO</span>
+        </li>
+        <li class="calendar waves-effect waves-teal">
+            <div class="img-nav">
+                <img src="images/icon/calendar.png" alt="">
+            </div>
+            <span>QUẢN LÝ</span>
+        </li>
+    </ul>
+</section><!-- /.vertical-navigation -->
+
+<main>
+    <section id="dashboard">
+        <div class="rows">
+            <div class="box-title">
+                <h3>BIỂU ĐỒ THEO DÕI CẢM BIẾN</h3>
+            </div>
+        </div><!-- /.rows -->
+
+        <div class="rows">
+            <div class="box box-spline right">
+                <div class="box-header with-border">
+                    <div class="box-title">
+                        <h3>Nhiệt độ</h3>
+                    </div>
+                    <div class="box-tools pull-right">
+                        <ul class="chart-tab">
+                            <li class="waves-effect waves-teal">WEEK</li>
+                            <li class="waves-effect waves-teal">MONTH</li>
+                            <li class="active waves-effect waves-teal">YEAR</li>
+                        </ul>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" class="waves-effect" title="">Action</a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect" title="">Support</a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect" title="">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect" title="">Message</a>
+                            </li>
+                        </ul>
+                    </div><!-- /.box-tools pull-right -->
+                    <div class="clearfix"></div>
+                </div><!-- /.box-header -->
+                <div class="box-content">
+                    <div class="divider35"></div>
+                    <div id="chart-spline"></div>
+                    <div class="legend">
+                        <ul class="legend-list">
+                            <li class="ux">
+                                <span class="dot"></span>
+                                <span class="text">aaa</span>
+                            </li>
+                            <li class="ui">
+                                <span class="dot"></span>
+                                <span class="text">bbb</span>
+                            </li>
+                            <li class="code">
+                                <span class="dot"></span>
+                                <span class="text">ccc</span>
+                            </li>
+                        </ul><!-- /.legend-list -->
+                    </div><!-- /.legend -->
+                </div><!-- /.box-content -->
+            </div><!-- /.box box-spline -->
+            <div class="clearfix"></div>
+        </div><!-- /.rows -->
+
+        <!--<div class="rows">-->
+            <!--<div class="box box-line left">-->
+                <!--<div class="box-header with-border">-->
+                    <!--<div class="box-title">-->
+                        <!--<h3>Biểu đồ cảm biến nhiệt độ</h3>-->
+                    <!--</div>-->
+                    <!--<div class="box-tools pull-right">-->
+                        <!--<i class="zmdi zmdi-more-vert waves-effect waves-teal"></i>-->
+                        <!--<ul class="dropdown-menu">-->
+                            <!--<li>-->
+                                <!--<a href="#" class="waves-effect" title="">Action</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#" class="waves-effect" title="">Support</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#" class="waves-effect" title="">FAQ</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#" class="waves-effect" title="">Message</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>&lt;!&ndash; /.box-tools pull-right &ndash;&gt;-->
+                    <!--<div class="clearfix"></div>-->
+                <!--</div>&lt;!&ndash; /.box-header &ndash;&gt;-->
+                <!--<div class="box-content style2">-->
+                    <!--<div class="divider50"></div>-->
+                    <!--<div id="lineChart"></div>-->
+                <!--</div>&lt;!&ndash; /.box-content &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /.box box-line &ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="box box-radar right">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="box-content">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="divider22"></div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<canvas id="radarChart" height = "150"></canvas>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="legend style2">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<ul class="legend-list">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li class="ux">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="dot"></span>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="text">Last Month</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li class="code">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="dot"></span>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="text">This Month</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</ul>&lt;!&ndash; /.legend-list &ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&lt;!&ndash; /.legend style2 &ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&lt;!&ndash; /.box-content &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&lt;!&ndash; /.box box-radar &ndash;&gt;&ndash;&gt;-->
+        <!--</div>&lt;!&ndash; /.rows &ndash;&gt;-->
+
+    </section><!-- /#dashboard -->
+
+    <section id="message">
+        <div class="box box-message">
+            <div class="box-header">
+                <div class="header-title">
+                    <img src="images/icon/download.png" alt="">
+                    <span>INBOX</span>
+                </div>
+            </div><!-- /.box-header -->
+            <div class="box-content">
+                <ul class="message-list scroll">
+                    <li class="waves-effect waves-teal">
+                        <div class="left">
+                            <div class="avatar">
+                                <img src="images/avatar/message-01.png" alt="">
+                                <div class="status-color blue style2 heartbit"></div>
+                            </div>
+                            <div class="content">
+                                <div class="username">
+                                    <div class="name">
+                                        Jonathan Alex
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <p>Hi, please loock my last design</p>
+                                    <p>I hope you like it.</p>
+                                </div>
+                            </div>
+                        </div><!-- /.left -->
+                        <div class="right">
+                            <div class="date">
+                                Today, 10:15 PM
+                            </div>
+                        </div><!-- /.right -->
+                        <div class="clearfix"></div>
+                    </li><!-- /li.waves-effect -->
+                    <li class="waves-effect waves-teal">
+                        <div class="left">
+                            <div class="avatar">
+                                <img src="images/avatar/message-02.png" alt="">
+                                <div class="status-color blue style2 heartbit"></div>
+                            </div>
+                            <div class="content">
+                                <div class="username">
+                                    <div class="name">
+                                        Ricky Martin
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <p>Hi, please loock my last design</p>
+                                    <p>I hope you like it.</p>
+                                </div>
+                            </div>
+                        </div><!-- /.left -->
+                        <div class="right">
+                            <div class="date">
+                                Today, 10:15 PM
+                            </div>
+                        </div><!-- /.right -->
+                        <div class="clearfix"></div>
+                    </li><!-- /li.waves-effect -->
+                    <li class="waves-effect waves-teal">
+                        <div class="left">
+                            <div class="avatar">
+                                <img src="images/avatar/message-03.png" alt="">
+                                <div class="status-color blue style2 heartbit"></div>
+                            </div>
+                            <div class="content">
+                                <div class="username">
+                                    <div class="name">
+                                        Tuan Bui
+                                    </div>
+                                    <span>2</span>
+                                </div>
+                                <div class="text">
+                                    <p>Hi, please loock my last design</p>
+                                    <p>I hope you like it.</p>
+                                </div>
+                            </div>
+                        </div><!-- /.left -->
+                        <div class="right">
+                            <div class="date">
+                                June 15
+                            </div>
+                        </div><!-- /.right -->
+                        <div class="clearfix"></div>
+                    </li><!-- /li.waves-effect -->
+                    <li class="waves-effect waves-teal active">
+                        <div class="left">
+                            <div class="avatar">
+                                <img src="images/avatar/message-04.png" alt="">
+                                <div class="status-color blue style2 heartbit"></div>
+                            </div>
+                            <div class="content">
+                                <div class="username">
+                                    <div class="name">
+                                        John Alex
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <p>Hi, please loock my last design</p>
+                                    <p>I hope you like it.</p>
+                                </div>
+                            </div>
+                        </div><!-- /.left -->
+                        <div class="right">
+                            <div class="date">
+                                June 12
+                            </div>
+                        </div><!-- /.right -->
+                        <div class="clearfix"></div>
+                    </li><!-- /li.waves-effect -->
+                    <li class="waves-effect waves-teal">
+                        <div class="left">
+                            <div class="avatar">
+                                <img src="images/avatar/message-05.png" alt="">
+                                <div class="status-color blue style2 heartbit"></div>
+                            </div>
+                            <div class="content">
+                                <div class="username">
+                                    <div class="name">
+                                        Robart K
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <p>Hi, please loock my last design</p>
+                                    <p>I hope you like it.</p>
+                                </div>
+                            </div>
+                        </div><!-- /.left -->
+                        <div class="right">
+                            <div class="date">
+                                June 11
+                            </div>
+                        </div><!-- /.right -->
+                        <div class="clearfix"></div>
+                    </li><!-- /li.waves-effect -->
+                    <li class="waves-effect waves-teal">
+                        <div class="left">
+                            <div class="avatar">
+                                <img src="images/avatar/message-05.png" alt="">
+                                <div class="status-color blue style2 heartbit"></div>
+                            </div>
+                            <div class="content">
+                                <div class="username">
+                                    <div class="name">
+                                        Robart K
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <p>Hi, please loock my last design</p>
+                                    <p>I hope you like it.</p>
+                                </div>
+                            </div>
+                        </div><!-- /.left -->
+                        <div class="right">
+                            <div class="date">
+                                June 11
+                            </div>
+                        </div><!-- /.right -->
+                        <div class="clearfix"></div>
+                    </li><!-- /li.waves-effect -->
+                </ul><!-- /.message-list scroll -->
+                <div class="new-message">
+                    <a href="#" class="waves-effect" title="">Compose New</a>
+                </div><!-- /.new-message -->
+            </div><!-- /.box-content -->
+        </div><!-- /.box box-message -->
+        <div class="message-info right">
+            <div class="message-header">
+                <div class="move-message">
+                    <a href="#" title="">
+                        <span><img src="images/icon/bin.png" alt=""></span>
+                        MOVE TO TRASH
+                    </a>
+                </div><!-- /.move-message -->
+                <div class="box-info-messager">
+                    <div class="message-pic">
+                        <img src="images/avatar/message-06.png" alt="">
+                        <div class="status-color purple"></div>
+                    </div>
+                    <div class="content">
+                        <div class="username">
+                            Ricky Martin
+                        </div>
+                        <div class="text">
+                            <p>Hi, please loock my last design</p>
+                            <p>I hope you like it.</p>
+                        </div>
+                    </div>
+                </div><!-- /.box-info-messager -->
+            </div><!-- /.message-header -->
+            <div class="message-box scroll">
+                <div class="message-in">
+                    <div class="message-pic">
+                        <img src="images/avatar/message-06.png" alt="">
+                        <div class="status-color purple"></div>
+                    </div>
+                    <div class="message-body">
+                        <div class="message-text">
+                            <p>Hi, John</p>
+                            <p>You have excellent dashboard design, I wanted to offer to cooprate. I can promote your design.</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div><!-- /.message-in -->
+                <div class="clearfix"></div>
+                <div class="message-out">
+                    <div class="message-pic">
+                        <img src="images/avatar/message-07.png" alt="">
+                        <div class="status-color purple"></div>
+                    </div>
+                    <div class="message-body">
+                        <div class="message-text">
+                            <p>Hi, Martin</p>
+                            <p>You have excellent dashboard design, I wanted to offer to cooprate. I can promote your design. to offer to cooprate</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div><!-- /.message-out -->
+                <div class="clearfix"></div>
+                <div class="message-in">
+                    <div class="message-pic">
+                        <img src="images/avatar/message-06.png" alt="">
+                        <div class="status-color purple"></div>
+                    </div>
+                    <div class="message-body">
+                        <div class="message-text">
+                            <p>Hi, John</p>
+                            <p>You have excellent dashboard design, I wanted to offer to cooprate. I can promote your design.</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div><!-- /.message-in -->
+                <div class="clearfix"></div>
+                <div class="message-out">
+                    <div class="message-pic">
+                        <img src="images/avatar/message-07.png" alt="">
+                        <div class="status-color purple"></div>
+                    </div>
+                    <div class="message-body">
+                        <div class="message-text">
+                            <p>Hi, Martin</p>
+                            <p>Here is some of my best work example for ux & ui design works. Reply me with your openion about my work</p>
+                        </div>
+                        <div class="message-image">
+                            <ul>
+                                <li>
+                                    <img src="images/message/01.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="images/message/02.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="images/message/03.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="images/message/04.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div><!-- /.message-out -->
+                <div class="clearfix"></div>
+                <div class="message-in">
+                    <div class="message-pic">
+                        <img src="images/avatar/message-06.png" alt="">
+                        <div class="status-color purple"></div>
+                    </div>
+                    <div class="message-body">
+                        <div class="message-text">
+                            <p>Hi, John</p>
+                            <p>You have excellent dashboard design, I wanted to offer to cooprate. I can promote your design.</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div><!-- /.message-in -->
+                <div class="clearfix"></div>
+                <div class="message-out">
+                    <div class="message-pic">
+                        <img src="images/avatar/message-07.png" alt="">
+                        <div class="status-color purple"></div>
+                    </div>
+                    <div class="message-body">
+                        <div class="message-text">
+                            <p>Hi, Martin</p>
+                            <p>Here is some of my best work example for ux & ui design works. Reply me with your openion about my work</p>
+                        </div>
+                        <div class="message-image">
+                            <ul>
+                                <li>
+                                    <img src="images/message/01.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="images/message/04.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div><!-- /.message-out -->
+            </div>
+            <div class="form-chat">
+                <form action="#" method="get" accept-charset="utf-8">
+                    <div class="message-form-chat">
+								<span class="pin">
+									<a href="#" title="">
+										<img src="images/icon/pin.png" alt="">
+									</a>
+								</span><!-- /.pin -->
+                        <span class="message-text">
+									<textarea name="message" placeholder="Type your message..." required="required"></textarea>
+								</span><!-- /.message-text -->
+                        <span class="camera">
+									<a href="#" title="">
+										<img src="images/icon/camera.png" alt="">
+									</a>
+								</span><!-- /.camera -->
+                        <span class="icon-message">
+									<a href="#" title="">
+										<img src="images/icon/icon-message.png" alt="">
+									</a>
+								</span><!-- /.icon-right -->
+                        <span class="btn-send">
+									<button class="waves-effect" type="submit">Send</button>
+								</span><!-- /.btn-send -->
+                        <div class="icon-mobile">
+                            <ul>
+                                <li>
+                                    <a href="#" title=""><img src="images/icon/pin.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#" title=""><img src="images/icon/camera.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#" title=""><img src="images/icon/icon-message.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div><!-- /.icon-right -->
+                    </div><!-- /.message-form-chat -->
+                    <div class="clearfix"></div>
+                </form><!-- /form -->
+            </div>
+        </div><!-- /.message-info -->
+        <div class="clearfix"></div>
+    </section><!-- /#message -->
+
+</main><!-- /main -->
+
+<section class="member-status right">
+    <div class="sidebar-member">
+        <ul class="member-tab">
+            <li>
+                <i class="fa fa-bell" aria-hidden="true"></i>
+            </li>
+            <li>
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </li>
+        </ul><!-- /.member-tab -->
+        <div class="content-tab">
+            <div class="scroll content">
+                <ul class="member-list online">
+                    <li class="member-header">CẢNH BÁO</li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/02.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Nhiệt độ không khí</p>
+                                <p class="options">đang vượt ngưỡng</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/03.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Độ ẩm không khí</p>
+                                <p class="options">đang vượt ngưỡng</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/04.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Cửa</p>
+                                <p class="options">đang mở</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/05.png" alt="">
+                                <div class="status-color pink heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Khói</p>
+                                <p class="options">đang có</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/06.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Cháy</p>
+                                <p class="options">đang có</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/07.png" alt="">
+                                <div class="status-color blue style2 heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Shawon Rox</p>
+                                <p class="options">Writer, Editor</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/08.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Jonathan Doe</p>
+                                <p class="options">UX Engineer</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/09.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Alex Morgan</p>
+                                <p class="options">Writer, Editor</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                </ul><!-- /.member-list online -->
+                <!--<ul class="member-list offline">-->
+                <!--<li class="member-header">OFFLINE</li>-->
+                <!--<li>-->
+                <!--<a href="#" title="">-->
+                <!--<div class="notify">-->
+                <!--<img src="images/avatar/10.png" alt="">-->
+                <!--<div class="status-color grey heartbit"></div>-->
+                <!--</div>-->
+                <!--<div class="info-user">-->
+                <!--<p class="name">Robart Alex</p>-->
+                <!--<p class="options">Writer, Editor</p>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+                <!--</a>	-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="#" title="">-->
+                <!--<div class="avatar">-->
+                <!--<img src="images/avatar/11.png" alt="">-->
+                <!--<div class="status-color grey heartbit"></div>-->
+                <!--</div>-->
+                <!--<div class="info-user">-->
+                <!--<p class="name">Anthony Gomes</p>-->
+                <!--<p class="options">Designer</p>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+                <!--</a>	-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="#" title="">-->
+                <!--<div class="avatar">-->
+                <!--<img src="images/avatar/12.png" alt="">-->
+                <!--<div class="status-color grey heartbit"></div>-->
+                <!--</div>-->
+                <!--<div class="info-user">-->
+                <!--<p class="name">Robarto Thuan</p>-->
+                <!--<p class="options">UX Designer</p>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+                <!--</a>	-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="#" title="">-->
+                <!--<div class="avatar">-->
+                <!--<img src="images/avatar/13.png" alt="">-->
+                <!--<div class="status-color grey heartbit"></div>-->
+                <!--</div>-->
+                <!--<div class="info-user">-->
+                <!--<p class="name">Mogen Polshin</p>-->
+                <!--<p class="options">UI Designer</p>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+                <!--</a>	-->
+                <!--</li>-->
+                <!--</ul>&lt;!&ndash; /.member-list offline &ndash;&gt;-->
+            </div><!-- /.content scroll -->
+            <div class="content scroll">
+                <ul class="member-list online">
+                    <li class="member-header">LỊCH SỬ HOẠT ĐỘNG</li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/user-64.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Admin 1</p>
+                                <p class="options">vừa bật máy lạnh</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/user-64.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Admin 2</p>
+                                <p class="options">vừa đăng nhập</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/user-64.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Admin 3</p>
+                                <p class="options">vừa cấu hình ngưỡng cảnh báo Độ ẩm không khí</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/user-64.png" alt="">
+                                <div class="status-color pink heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Admin 1</p>
+                                <p class="options">vừa đăng xuất</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/user-64.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Admin 2</p>
+                                <p class="options">vừa cấu hình cảnh báo cháy</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/user-64.png" alt="">
+                                <div class="status-color blue style2 heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Shawon Rox</p>
+                                <p class="options">Writer, Editor</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/08.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Jonathan Doe</p>
+                                <p class="options">UX Engineer</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="">
+                            <div class="avatar">
+                                <img src="images/avatar/09.png" alt="">
+                                <div class="status-color green heartbit"></div>
+                            </div>
+                            <div class="info-user">
+                                <p class="name">Alex Morgan</p>
+                                <p class="options">Writer, Editor</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </a>
+                    </li>
+                </ul><!-- /.member-list online -->
+                <!--<ul class="member-list offline">-->
+                <!--<li class="member-header">OFFLINE</li>-->
+                <!--<li>-->
+                <!--<a href="#" title="">-->
+                <!--<div class="notify">-->
+                <!--<img src="images/avatar/10.png" alt="">-->
+                <!--<div class="status-color grey heartbit"></div>-->
+                <!--</div>-->
+                <!--<div class="info-user">-->
+                <!--<p class="name">Robart Alex</p>-->
+                <!--<p class="options">Writer, Editor</p>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="#" title="">-->
+                <!--<div class="avatar">-->
+                <!--<img src="images/avatar/11.png" alt="">-->
+                <!--<div class="status-color grey heartbit"></div>-->
+                <!--</div>-->
+                <!--<div class="info-user">-->
+                <!--<p class="name">Anthony Gomes</p>-->
+                <!--<p class="options">Designer</p>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="#" title="">-->
+                <!--<div class="avatar">-->
+                <!--<img src="images/avatar/12.png" alt="">-->
+                <!--<div class="status-color grey heartbit"></div>-->
+                <!--</div>-->
+                <!--<div class="info-user">-->
+                <!--<p class="name">Robarto Thuan</p>-->
+                <!--<p class="options">UX Designer</p>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a href="#" title="">-->
+                <!--<div class="avatar">-->
+                <!--<img src="images/avatar/13.png" alt="">-->
+                <!--<div class="status-color grey heartbit"></div>-->
+                <!--</div>-->
+                <!--<div class="info-user">-->
+                <!--<p class="name">Mogen Polshin</p>-->
+                <!--<p class="options">UI Designer</p>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--</ul>&lt;!&ndash; /.member-list offline &ndash;&gt;-->
+            </div><!-- /.content scroll -->
+        </div><!-- /.cotnent-tab -->
+    </div><!-- /.sidebar-member -->
+</section><!-- /.member-status -->
+
+<!-- jQuery 3 -->
+<script src="javascript/jquery.min.js"></script>
+
+
+<!-- Bootstrap 4 -->
+<script src="javascript/tether.min.js"></script>
+<script src="javascript/bootstrap4-alpha3.min.js"></script>
+
+<!-- Map chart  -->
+<script src="javascript/ammap.js"></script>
+<script src="javascript/worldLow.js"></script>
+
+<!-- Morris.js charts -->
+<script src="javascript/raphael.min.js"></script>
+<script src="javascript/morris.min.js"></script>
+
+<!-- Chart -->
+<script src="javascript/Chart.min.js"></script>
+
+<script type="text/javascript" src="javascript/jquery.mCustomScrollbar.js"></script>
+<script src="javascript/smoothscroll.js"></script>
+<script src="javascript/waypoints.min.js"></script>
+<script src="javascript/jquery-countTo.js"></script>
+<script src="javascript/waves.min.js"></script>
+<script src="javascript/canvasjs.min.js"></script>
+
+<script src="javascript/main-chart.js"></script>
+
+</body>
+</html>
